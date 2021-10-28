@@ -14,7 +14,7 @@ function App() {
     console.log(name,age,country,points);
   };
   const addEmployee = () =>{
-    Axios.post('https://employee-manager-nrtan.herokuapp.com//create', {
+    Axios.post('https://employee-manager-nrtan.herokuapp.com/create', {
       name:name,
       age: age,
       country: country,
@@ -22,7 +22,7 @@ function App() {
     }).then(()=>console.log("succes"))
   };
   const getEmployees = () =>{
-    Axios.get('https://employee-manager-nrtan.herokuapp.com//employees').then((response)=>{
+    Axios.get('https://employee-manager-nrtan.herokuapp.com/employees').then((response)=>{
     setEmployeeList(response.data);
   });
   };
